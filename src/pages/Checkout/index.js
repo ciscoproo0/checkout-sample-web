@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { Container, Product, CheckoutInfo, PaymentArea } from './styles';
 
@@ -35,7 +35,6 @@ function Checkout() {
   const [country, setCountry] = useState('US');
   const [personPayload, setPersonPayload] = useState({});
   const [showPayment, setShowPayment] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,8 +60,6 @@ function Checkout() {
       history.push({ pathname: '/success', state: responsePayPal });
     }
   };
-
-  useEffect(() => {}, [loading]);
 
   return (
     <>
