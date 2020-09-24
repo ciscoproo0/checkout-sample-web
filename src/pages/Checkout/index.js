@@ -55,7 +55,6 @@ function Checkout() {
 
   const handlePayment = (responsePayPal) => {
     setShowPayment(false);
-    setLoading(true);
     if (responsePayPal.purchase_units[0].payments.captures[0].id) {
       history.push({ pathname: '/success', state: responsePayPal });
     }
