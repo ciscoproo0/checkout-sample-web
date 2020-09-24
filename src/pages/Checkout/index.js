@@ -37,46 +37,6 @@ function Checkout() {
   const [showPayment, setShowPayment] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleFirstName = (event) => {
-    setFirstName(event.target.value);
-  };
-
-  const handleLastName = (event) => {
-    setLastName(event.target.value);
-  };
-
-  const handleEmail = (event) => {
-    setEmail(event.target.value);
-  };
-
-  const handlePhoneNumber = (event) => {
-    setPhoneNumber(event.target.value);
-  };
-
-  const handleAddressLine1 = (event) => {
-    setAddressLine1(event.target.value);
-  };
-
-  const handleAddressLine2 = (event) => {
-    setAddressLine2(event.target.value);
-  };
-
-  const handleAdminArea1 = (event) => {
-    setAdminArea1(event.target.value);
-  };
-
-  const handleAdminArea2 = (event) => {
-    setAdminArea2(event.target.value);
-  };
-
-  const handlePostalCode = (event) => {
-    setPostalCode(event.target.value);
-  };
-
-  const handleCountry = (event) => {
-    setCountry(event.target.value);
-  };
-
   const handleSubmit = (event) => {
     event.preventDefault();
     setPersonPayload({
@@ -143,7 +103,7 @@ function Checkout() {
                       className="first-name"
                       placeholder="Paula"
                       value={firstName}
-                      onChange={handleFirstName}
+                      onChange={(event) => setFirstName(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -155,7 +115,7 @@ function Checkout() {
                       className="last-name"
                       placeholder="Diaz"
                       value={lastName}
-                      onChange={handleLastName}
+                      onChange={(event) => setLastName(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -169,7 +129,7 @@ function Checkout() {
                       className="email"
                       placeholder="pauladiaz@gmail.com"
                       value={email}
-                      onChange={handleEmail}
+                      onChange={(event) => setEmail(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -181,7 +141,7 @@ function Checkout() {
                       className="phone-numer"
                       placeholder="480-688-7004"
                       value={phoneNumber}
-                      onChange={handlePhoneNumber}
+                      onChange={(event) => setPhoneNumber(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -197,7 +157,7 @@ function Checkout() {
                       className="address-line1"
                       placeholder="4377 East Avenue"
                       value={addressLine1}
-                      onChange={handleAddressLine1}
+                      onChange={(event) => setAddressLine1(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -209,7 +169,7 @@ function Checkout() {
                       className="address-line2"
                       placeholder="Apartment 29B"
                       value={addressLine2}
-                      onChange={handleAddressLine2}
+                      onChange={(event) => setAddressLine2(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -223,7 +183,7 @@ function Checkout() {
                       className="admin-area2"
                       placeholder="Phoenix"
                       value={adminArea1}
-                      onChange={handleAdminArea1}
+                      onChange={(event) => setAdminArea2(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -235,7 +195,7 @@ function Checkout() {
                       className="admin-area1"
                       placeholder="Arizona(AZ)"
                       value={adminArea2}
-                      onChange={handleAdminArea2}
+                      onChange={(event) => setAdminArea1(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -247,7 +207,7 @@ function Checkout() {
                       className="postal-code"
                       placeholder="85034"
                       value={postalCode}
-                      onChange={handlePostalCode}
+                      onChange={(event) => setPostalCode(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
@@ -259,7 +219,7 @@ function Checkout() {
                       className="country-code"
                       placeholder="US"
                       value={country}
-                      onChange={handleCountry}
+                      onChange={(event) => setCountry(event.target.value)}
                       disabled={showPayment}
                     />
                   </label>
